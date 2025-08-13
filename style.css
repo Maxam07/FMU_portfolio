@@ -126,6 +126,13 @@ header > div > span {
     height: 8rem;
 }
 
+.skills_icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .skills_box > span, .skills_icon > span, .cert_box > span {
     font-size: 2em;
 }
