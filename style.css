@@ -21,6 +21,10 @@ a {
     font-weight: 200; 
 }
 
+.fullName {
+    font-size: medium;
+}
+
 span {
     font-size: 1rem;
     letter-spacing: 1px;
@@ -219,8 +223,11 @@ header > div > span {
     padding-left: 1.5rem;
 }
 
+.contribution_link > li > a:hover {
+     color: rgba(50, 102, 235, 0.948);
+}
 
-a:hover, a:active {
+a:active {
   color: rgba(50, 102, 235, 0.948);
 }
 
@@ -246,6 +253,10 @@ a:hover, a:active {
     }
 
     .fullName {
+        font-size: x-large;
+    }
+
+    .shortName {
         font-size: 4rem;
     }
 
