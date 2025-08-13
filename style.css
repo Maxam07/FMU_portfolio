@@ -45,7 +45,6 @@ p {
 }
 
 .skills_box, .cert_box, .my_proj_box {
-    /* width: calc(100% - 2rem); */
     margin: 1.5rem 0;
     padding: 1.5rem;
     border-radius: 1.5rem;
@@ -131,6 +130,7 @@ header > div > span {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .skills_box > span, .skills_icon > span, .cert_box > span {
