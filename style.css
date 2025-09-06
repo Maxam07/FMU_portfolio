@@ -1,10 +1,11 @@
 body {
-    margin: 0 2rem;
-    padding: 0 0;
+    margin: 0;
+    padding: 0 2rem;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: aliceblue;
     background-color: hsl(213, 14%, 12%);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h6 {
@@ -19,6 +20,8 @@ h5 {
 
 a {
     font-weight: 200; 
+    color: aliceblue;
+    text-decoration: none;
 }
 
 .fullName {
@@ -104,7 +107,7 @@ header > div > span {
 }
 
 .skills_box, .cert_box, .my_proj_box {
-    margin: 1.5rem 0;
+    /* margin: 1.5rem 0; */
     padding: 1.5rem;
     border-radius: 1.5rem;
     background-color: #2c2d301e;
@@ -112,9 +115,10 @@ header > div > span {
 }
 
 .skills_box_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.5rem;
 }
 
 .skills_box {
@@ -122,7 +126,6 @@ header > div > span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 8rem;
 }
 
 .skills_icon {
@@ -133,16 +136,15 @@ header > div > span {
     gap: 1rem;
 }
 
-.skills_box > span, .skills_icon > span, .cert_box > span {
-    font-size: 2em;
+.cert_box_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 5rem;
 }
 
-.cert_box_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3rem 0;
+.mb-none {
+    display: none;
 }
 
 .cert_box > span {
@@ -152,11 +154,14 @@ header > div > span {
 }
 
 #my_projects {
-    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 5rem 0;
 }
 
 .my_proj_box {
-    display: flex;
+    display: grid;
     flex-direction: column;
     height: max-content;
 }
@@ -196,7 +201,7 @@ header > div > span {
     padding-right: 1rem;
 }
 
-.contribution_link > li > a {
+.contribution_link > ul > a {
     color: whitesmoke;
     letter-spacing: 1px;
     text-decoration: none;
@@ -297,14 +302,9 @@ a:active {
     }
 
     .skills_box_container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .skills_box {
-        align-items: center;
-        width: 18rem;
-        height: 15rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 3rem;
     }
 
     .skills_icon {
@@ -316,30 +316,24 @@ a:active {
     }
     
     .cert_box_container {
-        align-items: normal;
-        gap: 3rem;
-        margin: 7rem 0 0 0;
-        background-size: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 8rem;
     }
 
-    .cert_box {
-        flex-direction: row-reverse;
-        width: 50%;
-        justify-content: space-between;
-        align-items: normal;
-        padding: 2rem;
-        gap: 1rem;
-        overflow: hidden;
+    .mb-none {
+        display: block;
+        background-color: transparent;
+        box-shadow: none;
     }
 
-    .left {
-        align-self: flex-end;
+    .cert_box > .left {
+        align-self: end;
     }
 
     #my_projects {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
 
@@ -351,7 +345,6 @@ a:active {
 
     .my_proj_box {
         padding: 3rem;
-        width: 45rem;
     }
 
     .proj_info {
