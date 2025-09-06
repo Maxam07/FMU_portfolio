@@ -51,8 +51,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 3rem);
-    padding: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 2rem;
     background-color: #1b1f24;
     z-index: 10;
 }
@@ -228,12 +228,16 @@ a:active {
         background-size: 90%;
     }
 
-    body, header {
-        margin: 0 10rem;
-        padding-left: 0;
-        padding-right: 0;
+    body{
+        margin: 0;
+        padding: 0 12rem;
         background-size: 80%;
         background-repeat: repeat;
+    }
+
+    header {
+        padding: 1.5rem 10rem;
+        background-color: #1b1f24c2;
     }
 
     #about, #my_projects, #contact {
@@ -298,7 +302,7 @@ a:active {
     }
     
     .svg_icon {
-        width: 3rem;
+        width: 2.5rem;
     }
 
     .skills_box_container {
@@ -318,6 +322,7 @@ a:active {
     .cert_box_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 4rem;
         margin-top: 8rem;
     }
 
@@ -334,7 +339,8 @@ a:active {
     #my_projects {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 4rem;
+        margin-top: 5rem;
     }
 
     .proj_img_container {
